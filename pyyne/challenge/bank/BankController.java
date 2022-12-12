@@ -8,11 +8,14 @@ package com.pyyne.challenge.bank;
 public class BankController {
 
     public void printBalances() {
-        System.out.println("Implement me to pull balance information from all available bank integrations and display them, one after the other.");
+//        System.out.println("Implement me to pull balance information from all available bank integrations and display them, one after the other.");
+    	System.out.println(new Bank1Processor().getBalance()+ new Bank1Processor().getCurrency());
+//    	System.out.println(new Bank2Processor().getBalance());
     }
 
     public void printTransactions() {
-        System.out.println("Implement me to pull transactions from all available bank integrations and display them, one after the other.");
+//        System.out.println("Implement me to pull transactions from all available bank integrations and display them, one after the other.");
+    	System.out.println(new Bank1Processor().getTransactionsInfo());
     }
     
     public static void main(String[] args) {
