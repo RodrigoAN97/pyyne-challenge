@@ -6,6 +6,7 @@ import java.util.List;
 import com.bank1.integration.Bank1AccountSource;
 import com.bank1.integration.Bank1Transaction;
 import com.pyyne.challenge.bank.BankAdapter;
+import com.pyyne.challenge.bank.Services.TransactionsService;
 
 public class Bank1Processor extends Bank1AccountSource implements BankAdapter {
 
@@ -32,7 +33,7 @@ public class Bank1Processor extends Bank1AccountSource implements BankAdapter {
 			} else {
 				card = "DEBIT";
 			}
-			String transaction = text + " of value " + Double.toString(amount) + " using " + card + " card";
+			String transaction = new TransactionsService().getTransactionsText(text, amount, card);
 			transactionsInfo.add(transaction);
 		}
 		return transactionsInfo;

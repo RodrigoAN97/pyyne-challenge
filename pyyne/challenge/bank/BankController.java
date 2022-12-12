@@ -1,4 +1,5 @@
 package com.pyyne.challenge.bank;
+
 import com.pyyne.challenge.bank.Processors.Bank1Processor;
 import com.pyyne.challenge.bank.Processors.Bank2Processor;
 
@@ -15,7 +16,6 @@ public class BankController {
     }
 
     public void printTransactions() {
-//        System.out.println("Implement me to pull transactions from all available bank integrations and display them, one after the other.");
     	System.out.println(new Bank1Processor().getTransactionsInfo());
     	System.out.println(new Bank2Processor().getTransactionsInfo());
     }

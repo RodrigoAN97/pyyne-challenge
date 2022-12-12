@@ -7,6 +7,7 @@ import com.bank2.integration.Bank2AccountSource;
 import com.bank2.integration.Bank2AccountTransaction;
 import com.bank2.integration.Bank2AccountTransaction.TRANSACTION_TYPES;
 import com.pyyne.challenge.bank.BankAdapter;
+import com.pyyne.challenge.bank.Services.TransactionsService;
 
 public class Bank2Processor extends Bank2AccountSource implements BankAdapter {
 
@@ -33,7 +34,7 @@ public class Bank2Processor extends Bank2AccountSource implements BankAdapter {
 			} else {
 				card = "DEBIT";
 			}
-			String transaction = text + " of value " + Double.toString(amount) + " using " + card + " card";
+			String transaction = new TransactionsService().getTransactionsText(text, amount, card);
 			transactionsInfo.add(transaction);
 		}
 		return transactionsInfo;
