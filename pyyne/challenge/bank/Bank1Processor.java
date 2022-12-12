@@ -9,12 +9,12 @@ import com.bank1.integration.Bank1Transaction;
 public class Bank1Processor extends Bank1AccountSource implements BankAdapter {
 
 	@Override
-	public Double getBalance() {
+	public Double getBankBalance() {
 		return getAccountBalance(0);
 	}
 
 	@Override
-	public String getCurrency() {
+	public String getBankCurrency() {
 		return getAccountCurrency(0);
 	}
 

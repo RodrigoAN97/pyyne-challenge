@@ -3,9 +3,9 @@ package com.pyyne.challenge.bank;
 import java.util.List;
 
 public interface BankAdapter {
-	Double getBalance();
+	Double getBankBalance();
 	
-	String getCurrency();
+	String getBankCurrency();
 	
 	List<String> getTransactionsInfo();
 }
