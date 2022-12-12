@@ -1,4 +1,4 @@
-package com.pyyne.challenge.bank;
+package com.pyyne.challenge.bank.Processors;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -6,6 +6,7 @@ import java.util.List;
 import com.bank2.integration.Bank2AccountSource;
 import com.bank2.integration.Bank2AccountTransaction;
 import com.bank2.integration.Bank2AccountTransaction.TRANSACTION_TYPES;
+import com.pyyne.challenge.bank.BankAdapter;
 
 public class Bank2Processor extends Bank2AccountSource implements BankAdapter {
 
