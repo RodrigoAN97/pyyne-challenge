@@ -31,7 +31,7 @@ public class Bank1Processor extends Bank1AccountSource implements BankAdapter {
 			} else {
 				card = "DEBIT";
 			}
-			String transaction = text + "of value" + Double.toString(amount) + "using" + card + "card";
+			String transaction = text + " of value " + Double.toString(amount) + " using " + card + " card";
 			transactionsInfo.add(transaction);
 		}
 		return transactionsInfo;
