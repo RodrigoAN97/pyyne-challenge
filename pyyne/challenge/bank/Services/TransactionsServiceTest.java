@@ -9,13 +9,13 @@ class TransactionsServiceTest {
 	@Test
 	void shouldReturnCorrectTransactionText() {
 		TransactionsService transactionsService = new TransactionsService();
-		assertEquals("Car of value 20000.0 using CREDIT card", transactionsService.getTransactionsText("Car", 20000, "CREDIT"));
+		assertEquals("Car of value 20000.0 using credit card", transactionsService.getTransactionsText("Car", 20000, true));
 	}
 	
 	@Test
 	void shouldReturnCorrectTransactionTextWhenDecimal() {
 		TransactionsService transactionsService = new TransactionsService();
-		assertEquals("Car of value 20000.25 using CREDIT card", transactionsService.getTransactionsText("Car", 20000.25, "CREDIT"));
+		assertEquals("Car of value 20000.25 using debit card", transactionsService.getTransactionsText("Car", 20000.25, false));
 	}
 
 }

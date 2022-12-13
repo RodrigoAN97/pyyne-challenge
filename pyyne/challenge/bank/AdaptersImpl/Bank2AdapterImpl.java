@@ -26,15 +26,7 @@ public class Bank2AdapterImpl extends Bank2AccountSource implements BankAdapter 
 		List<Bank2AccountTransaction> transactions = getTransactions(0, null, null);
 		List<String> transactionsInfo = new LinkedList<String>();
 		for(Bank2AccountTransaction i: transactions) {
-			String text = i.getText();
-			double amount = i.getAmount();
-			String card = "";
-			if(i.getType() == TRANSACTION_TYPES.CREDIT) {
-				card = "CREDIT";
-			} else {
-				card = "DEBIT";
-			}
-			String transaction = new TransactionsService().getTransactionsText(text, amount, card);
+			String transaction = new TransactionsService().getTransactionsText(i.getText(), i.getAmount(), i.getType() == TRANSACTION_TYPES.CREDIT);
 			transactionsInfo.add(transaction);
 		}
 		return transactionsInfo;

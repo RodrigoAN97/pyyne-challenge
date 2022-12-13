@@ -25,15 +25,7 @@ public class Bank1AdapterImpl extends Bank1AccountSource implements BankAdapter 
 		List<Bank1Transaction> transactions = getTransactions(0, null, null);
 		List<String> transactionsInfo = new LinkedList<String>();
 		for(Bank1Transaction i: transactions) {
-			String text = i.getText();
-			double amount = i.getAmount();
-			String card = "";
-			if(i.getType() == 1) {
-				card = "CREDIT";
-			} else {
-				card = "DEBIT";
-			}
-			String transaction = new TransactionsService().getTransactionsText(text, amount, card);
+			String transaction = new TransactionsService().getTransactionsText(i.getText(), i.getAmount(), i.getType() == 1);
 			transactionsInfo.add(transaction);
 		}
 		return transactionsInfo;
