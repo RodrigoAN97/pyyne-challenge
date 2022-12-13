@@ -19,9 +19,4 @@ public class BankController {
     	System.out.println(new Bank1AdapterImpl().getTransactionsInfo());
     	System.out.println(new Bank2AdapterImpl().getTransactionsInfo());
     }
-    
-    public static void main(String[] args) {
-        new BankController().printBalances();
-        new BankController().printTransactions();
-    }
 }
