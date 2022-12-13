@@ -1,4 +1,4 @@
-package com.pyyne.challenge.bank.Processors;
+package com.pyyne.challenge.bank.AdaptersImpl;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -9,7 +9,7 @@ import com.bank2.integration.Bank2AccountTransaction.TRANSACTION_TYPES;
 import com.pyyne.challenge.bank.BankAdapter;
 import com.pyyne.challenge.bank.Services.TransactionsService;
 
-public class Bank2Processor extends Bank2AccountSource implements BankAdapter {
+public class Bank2AdapterImpl extends Bank2AccountSource implements BankAdapter {
 
 	@Override
 	public Double getBankBalance() {
